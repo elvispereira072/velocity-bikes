@@ -1,0 +1,377 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+/* Container principal */
+.App {
+  text-align: center;
+}
+
+/* Cabeçalho */
+.App-header {
+  background: linear-gradient(45deg, #ff6600, #ff9933);
+  color: white;
+  padding: 5rem 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.App-header:hover {
+  background: linear-gradient(45deg, #e55d00, #ff6600);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.App-header h1 {
+  font-size: 4rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.App-header h1:hover {
+  transform: scale(1.1);
+  color: #ffcc00;
+}
+
+/* Navegação */
+nav {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  color: white;
+  font-size: 2.8rem;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: rotate(90deg);
+  color: #ffcc00;
+}
+
+/* Links de navegação */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 1.2rem;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+  transform: translateY(-3px);
+}
+
+/* Menu móvel */
+.nav-links.open {
+  display: block;
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  background: linear-gradient(135deg, #00bcd4, #1e88e5); /* Gradiente de azul */
+  width: 450px;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links.open li {
+  text-align: center;
+  padding: 12px 0;
+}
+
+.nav-links.open a {
+  font-size: 1.4rem;
+  color: #ff6600;
+}
+
+/* Seções */
+section {
+  padding: 6rem 10%;
+  margin: 0;
+}
+
+/* Títulos */
+h2 {
+  font-size: 3.8rem;
+  margin-bottom: 35px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Produtos, Serviços e Testemunhos */
+.product-list, .service-list, .testimonial-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.product-item, .service-item, .testimonial-item {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-item:hover, .service-item:hover, .testimonial-item:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+  transform: scale(1.05);
+}
+
+.product-item h3 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.discounted-price {
+  color: #ff6600;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+/* WhatsApp */
+.whatsapp-button {
+  background-color: #25d366;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+}
+
+/* Testemunhos */
+.testimonial-item p {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.rating {
+  color: #ffcc00;
+}
+
+/* Rodapé */
+footer {
+  background: linear-gradient(45deg, #ff6600, #ff9933);
+  color: white;
+  padding: 4rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+footer h2 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .App-header h1 {
+      font-size: 2.5rem;
+  }
+
+  .nav-links {
+      display: none;
+  }
+
+  .nav-links.open {
+      display: block;
+      padding: 30px;
+      width: 100%;
+  }
+
+  .product-list, .service-list, .testimonial-list {
+      grid-template-columns: 1fr;
+  }
+
+  footer {
+      padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  footer h2 {
+      font-size: 2.2rem;
+  }
+
+  footer p {
+      font-size: 1rem;
+  }
+}
+
+/* Seção Hero com Vídeo */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content h2 {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.hero-content p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.cta-button {
+  background-color: #ff6600;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e55d00;
+  transform: scale(1.1);
+}
+
+/* Estilo do menu */
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Menu responsivo */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 200px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.open {
+      display: block;
+  }
+
+  .menu-toggle {
+      background: none;
+      border: none;
+      font-size: 30px;
+      color: #333;
+      cursor: pointer;
+  }
+}
